@@ -1,0 +1,30 @@
+<app-header></app-header>
+
+<div class="container">
+
+    <h3>Lista de productos</h3><br>
+
+    <button type="button" class="btn btn-info" (click)="nuevoproducto()">Nuevo producto</button>
+
+    <table class="table table-hover table-dark">
+        <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Descripción</th>
+            <!-- <th scope="col">Imagen</th>--> 
+        </tr>
+        </thead>
+        <tbody *ngFor="let Producto of productos" (click)="editarproducto(Producto.id)">
+        <tr>
+            <th scope="row">{{Producto.id}}</th>
+            <td>{{Producto.title}}</td>
+            <td>{{Producto.price}}</td>
+            <td>{{Producto.description}}</td>
+            <!-- <td> {{Producto.Images}}</td></td> -->
+        </tbody>
+    </table>
+</div>  
+
+<app-footer></app-footer>   
