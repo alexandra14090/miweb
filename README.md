@@ -32,4 +32,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 En este repositorio se encontrarán 12 Ejercicios resueltos de JavaScript, ejercicios que salieron del link: https://github.com/makeitrealcamp/ejercicios-javascript
 
 y se encontrarán 4 Ejercicios resueltos de la página: https://adventjs.dev/es
+
+también se encontrará el miniproyecto y el portafolio
 >>>>>>> bb2138b4a01ebeabc242ff0952fb8d13b3beece6
