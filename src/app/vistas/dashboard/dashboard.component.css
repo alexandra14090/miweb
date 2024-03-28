@@ -1,0 +1,12 @@
+.descripcion {
+    width: 200px; /* Ancho fijo para la descripción */
+    max-height: 50px; /* Altura máxima para la descripción */
+    overflow-y: auto; /* Agregar scroll vertical si es necesario */
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+}
+.title {
+    width: 200px; /* Ancho fijo para la descripción */
+    max-height: 50px; /* Altura máxima para la descripción */
+    overflow-y: auto; /* Agregar scroll vertical si es necesario */
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+}

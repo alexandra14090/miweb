@@ -10,21 +10,25 @@ import { ListaProductosI } from 'src/app/modelos/listaproductos.interface';
 })
 export class DashboardComponent implements OnInit {
 
-  productos:ListaProductosI[] = [];
+  productos: ListaProductosI[] = [];
 
-  constructor(private api:ApiService, private router:Router) { }
+  constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
-      this.api.GetAllProducts(1).subscribe(data =>{
-        this.productos = data;
-      })
+    this.api.GetAllProducts(1).subscribe(data => {
+      // Convertir el id de number a string para que coincida con el tipo definido en ListaProductosI
+      this.productos = data.map(producto => ({
+        ...producto,
+        id: String(producto.id)
+      }));
+    });
   }
 
   editarproducto(id: any){
-      this.router.navigate(['editar', id]);
+    this.router.navigate(['editar', id]);
   }
 
   nuevoproducto() {
     this.router.navigate(['nuevo']);
   }
-}   
+}

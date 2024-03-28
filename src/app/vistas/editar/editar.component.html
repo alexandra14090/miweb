@@ -1,21 +1,44 @@
 <app-header></app-header>
 
 <div class="container">
+    <h3>Actualiza o elimina un producto</h3>
+    <div class="alert alert-primary alerta" role="alert" *ngIf="showAlert">
+        {{ message }}
+    </div>
+    <div class="alert alert-primary alert" role="alert" *ngIf="showAlert2">
+        {{ message2 }}
+    </div>
     <form [formGroup]="editarForm" (ngSubmit)="postForm()">
         <div class="form-group row">
             <div class="col">
-                <label for="exampleFormControlInput1">Nombre</label>
+                <label for="title">Producto</label>
                 <input type="text" class="form-control" placeholder="Nombre del producto" formControlName="title"> 
             </div> 
             <div class="col">
-                <label for="exampleFormControlInput1">Precio</label>
+                <label for="price">Precio</label>
                 <input type="text" class="form-control" placeholder="Precio del producto" formControlName="price"> 
             </div>
+            <div class="col">
+                <label for="description">Descripción</label>
+                <input type="text" class="form-control" placeholder="Descripción del producto" formControlName="description"> 
+            </div> 
+            <div class="col">
+                <label for="categoryId">Categoría</label>
+                <select class="form-control" formControlName="categoryId" (change)="updateCategoryOnChange($event)">
+                    <option *ngFor="let category of categorias" [value]="category.id">{{ category.name }}</option>
+                </select>                    
+            </div> 
+            <div class="col">
+                <label for="images">Imagen</label>
+                <input type="file" class="form-control" placeholder="Imagen del producto" formControlName="imageFile" id="productImage">    
+            </div> 
         </div>
         <br>
-        <button type="submit" class="btn btn-info">Guardar</button>
-        <button type="button" class="btn btn-danger" (click)="delete()">Eliminar</button>
-    </form> 
+        <button type="submit" class="btn btn-info" (click)="doSomething()">Guardar</button>
+        <button type="button" class="btn btn-danger" (click)="confirmDelete()">Eliminar</button>
+        <button type="button" class="btn btn-dark" (click)="salir()">Salir</button>
+
+    </form>     
 </div>  
 
-<app-footer></app-footer>   
+<app-footer></app-footer>

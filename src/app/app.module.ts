@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
+    FooterComponent,    
     routingComponents,
   ],
   imports: [
@@ -26,3 +26,5 @@ import { Router } from '@angular/router';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+  
