@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Miniproyecto
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
@@ -25,3 +26,10 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+=======
+# Programación Web
+
+En este repositorio se encontrarán 12 Ejercicios resueltos de JavaScript, ejercicios que salieron del link: https://github.com/makeitrealcamp/ejercicios-javascript
+
+y se encontrarán 4 Ejercicios resueltos de la página: https://adventjs.dev/es
+>>>>>>> bb2138b4a01ebeabc242ff0952fb8d13b3beece6
